@@ -14,3 +14,14 @@ function generate_rand_message(arr) {
     rand_index = Math.floor(Math.random() * arr.length)
     return arr[rand_index];
 }
+
+function add_stoic_message(message) {
+    if (stoic_messages.includes(message, 0)) {
+        console.log("Message already exists!");
+    } else {
+        stoic_messages.push(message);
+    }
+}
+
+add_stoic_message('Time and money are almost always saved to be wasted.');
+console.log(stoic_messages);
